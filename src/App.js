@@ -3,6 +3,8 @@ import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faChevronRight, faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSquareTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+
 import logo from './img/favicon.png'
 import { Route, Routes, Link } from 'react-router-dom';
 import Home from "./components/Home";
@@ -46,7 +48,7 @@ function Header() {
 
 function Footer() {
   return(
-    <div className='contenair-fluid bg-warning'>
+    <div className='contenair-fluid'>
       <div className='row m-2'>
         <div className='col-12 col-md-6 col-xl-3 my-2'>
           <address>
@@ -84,6 +86,8 @@ function Footer() {
           <h3>Mes derniers articles</h3>
         </div>
       </div>
+
+      <p className='bg-dark text-white text-center py-2'><FontAwesomeIcon icon={faCopyright} /> Designed by John Doe</p>
     </div>
   )
 }
