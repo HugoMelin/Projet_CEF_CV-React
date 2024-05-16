@@ -1,0 +1,22 @@
+.banner {
+    background-image: url("./img/banner.jpg");
+    height: 300px;
+}
+
+em {
+    text-decoration: underline dotted;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-image: url("./img/banner-mobile.jpg");
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .banner {
+        background-image: url("./img/banner-tablette.jpg");
+        height: 300px;
+    }
+}
