@@ -1,5 +1,4 @@
 import "../home.css"
-import { Link } from "react-router-dom"
 import aboutImg from "../img/john-doe-about.jpg"
 
 function Head() {
