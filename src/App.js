@@ -1,7 +1,7 @@
 import './header.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faChevronRight, faCircleChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSquareTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import logo from './img/favicon.png'
 import { Route, Routes, Link } from 'react-router-dom';
@@ -91,11 +91,13 @@ function Footer() {
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header id="top"/>
 
       <Routes>
         <Route path='/' element={<Home />}/>
       </Routes>
+
+      <a class="btn btn-secondary position-sticky bottom-0 start-100" href="#top" role="button"><FontAwesomeIcon icon={faCircleChevronUp}/></a>
 
       <Footer />
     </div>
