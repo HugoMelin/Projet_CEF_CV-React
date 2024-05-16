@@ -16,3 +16,16 @@ strong {
   font-weight: 600;
   color: black;
 }
+
+a {
+  color: #444;
+  text-decoration: none;
+}
+
+.chevronRight {
+  color: #0d6efd;
+}
+
+.footer__list {
+  list-style-type: none;
+}
