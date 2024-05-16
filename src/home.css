@@ -1,0 +1,22 @@
+.bg-image {
+    background-image: url("./img/hero-bg.jpg");
+    height: 1100px;
+}
+
+#header {
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .bg-image {
+        background-image: url("./img/hero-bg-mobile.jpg");
+        height: 768px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .bg-image {
+        background-image: url("./img/hero-bg-tablette.jpg");
+        height: 587px;
+    }
+}
