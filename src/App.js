@@ -14,6 +14,7 @@ import Services from "./components/Services";
 import Realisations from './components/Realisations';
 import Blog from './components/Blog';
 import Contact from './components/Contact';
+import Legal from './components/Legal'
 
 function Header() {
   return(
@@ -54,7 +55,7 @@ function Header() {
 
 function Footer() {
   return(
-    <div>
+    <div className='pt-4'>
       <div className='container-fluid'>
         <div className='row m-2'>
           <div className='col-12 col-md-6 col-xl-3 my-2'>
@@ -162,6 +163,7 @@ function App() {
         <Route path='/realisations' element={<Realisations />}/>
         <Route path='/blog' element={<Blog />}/>
         <Route path='/contact' element={<Contact />}/>
+        <Route path='/legal' element={<Legal />}/>
       </Routes>
 
       <Footer />
