@@ -35,6 +35,10 @@ a {
   height: 300px;
 }
 
+.active-link {
+  color: red;
+}
+
 @media (max-width: 768px) {
   .banner {
       background-image: url("./img/banner-mobile.jpg");
