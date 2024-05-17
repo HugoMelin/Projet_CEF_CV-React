@@ -12,7 +12,8 @@ import logo from './img/favicon.png'
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Realisations from './components/Realisations';
-import Blog from './components/Blog'
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 
 function Header() {
   return(
@@ -41,7 +42,7 @@ function Header() {
                 <Link to="/blog" className='nav-link'>Blog</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">me contacter</a>
+                <Link to="/contact" className='nav-link'>Me contacter</Link>
               </li>
             </ul>
           </div>
@@ -160,6 +161,7 @@ function App() {
         <Route path='/services' element={<Services />}/>
         <Route path='/realisations' element={<Realisations />}/>
         <Route path='/blog' element={<Blog />}/>
+        <Route path='/contact' element={<Contact />}/>
       </Routes>
 
       <Footer />
