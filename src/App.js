@@ -12,6 +12,7 @@ import logo from './img/favicon.png'
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Realisations from './components/Realisations';
+import Blog from './components/Blog'
 
 function Header() {
   return(
@@ -37,7 +38,7 @@ function Header() {
                 <Link to="/realisations" className='nav-link'>Réalisations</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
+                <Link to="/blog" className='nav-link'>Blog</Link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">me contacter</a>
@@ -81,6 +82,7 @@ function Footer() {
               <li><Link to="/#about"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>A propos</Link></li>
               <li><Link to="/services"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Services</Link></li>
               <li><Link to="/realisations"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Réalisations</Link></li>
+              <li><Link to="/blog"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Blog</Link></li>
               <li><Link to="/contact"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Me contacter</Link></li>
               <li><Link to="/legal"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Mention légales</Link></li>
             </ul>
@@ -157,6 +159,7 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/services' element={<Services />}/>
         <Route path='/realisations' element={<Realisations />}/>
+        <Route path='/blog' element={<Blog />}/>
       </Routes>
 
       <Footer />
