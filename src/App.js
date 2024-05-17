@@ -10,7 +10,8 @@ import { useState, useEffect } from 'react'
 
 import logo from './img/favicon.png'
 import Home from "./components/Home";
-import Services from "./components/Services"
+import Services from "./components/Services";
+import Realisations from './components/Realisations';
 
 function Header() {
   return(
@@ -33,7 +34,7 @@ function Header() {
                 <Link to="/services" className='nav-link'>Services</Link>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Réalisations</a>
+                <Link to="/realisations" className='nav-link'>Réalisations</Link>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Blog</a>
@@ -79,6 +80,7 @@ function Footer() {
               <li><Link to="/"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Accueil</Link></li>
               <li><Link to="/#about"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>A propos</Link></li>
               <li><Link to="/services"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Services</Link></li>
+              <li><Link to="/realisations"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Réalisations</Link></li>
               <li><Link to="/contact"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Me contacter</Link></li>
               <li><Link to="/legal"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Mention légales</Link></li>
             </ul>
@@ -154,6 +156,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/services' element={<Services />}/>
+        <Route path='/realisations' element={<Realisations />}/>
       </Routes>
 
       <Footer />
