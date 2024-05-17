@@ -7,6 +7,10 @@ em {
     text-decoration: underline dotted;
 }
 
+.card {
+    height: 100%;
+}
+
 @media (max-width: 768px) {
     .banner {
         background-image: url("./img/banner-mobile.jpg");

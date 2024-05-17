@@ -12,8 +12,8 @@ export default function Services () {
                 <p>Voici les prestations sur lesquelles je peux intervenir.</p>
                 <div className='border-bottom w-25 m-auto border-3' style={{"--bs-border-color": "#0d6efd"}}></div>
                     
-                <div className="row m-2 h-auto">
-                    <div className='col-md-4 h-100 my-auto'>
+                <div className="row m-3 h-auto">
+                    <div className='col-md-4 mb-1'>
                         <div class="card m-1">
                             <div class="card-body">
                                 <h3 class="card-title"><FontAwesomeIcon icon={faDisplay} style={{color: "#0d6efd"}} /></h3>
@@ -22,7 +22,7 @@ export default function Services () {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-4 h-100 my-auto'>
+                    <div className='col-md-4 mb-1'>
                         <div class="card m-1">
                             <div class="card-body">
                                 <h3 class="card-title"><FontAwesomeIcon icon={faFileCode} style={{color: "#0d6efd"}} /></h3>
@@ -31,7 +31,7 @@ export default function Services () {
                             </div>
                         </div>
                     </div>
-                    <div className='col-md-4 h-100 my-auto'>
+                    <div className='col-md-4 mb-1'>
                         <div class="card m-1">
                             <div class="card-body">
                                 <h3 class="card-title"><FontAwesomeIcon icon={faMagnifyingGlassDollar} style={{color: "#0d6efd"}} /></h3>
