@@ -29,29 +29,24 @@ function About() {
                     <h3>Mes compétences</h3>
                     <div className="container">
                         <p className="mb-0">HTML5 90%</p>
-                        <div className="row mb-3">
-                            <div className="col-10 rounded-start" style={{height: 1.5+"rem", backgroundColor: "#DB4B4B"}}></div>
-                            <div className="col-2 rounded-end" style={{height: 1.5+"rem", backgroundColor: "#CDCDCD"}}></div>
+                        <div className="progress mb-3">
+                            <div class="progress-bar bg-danger" role="progressbar" style={{ width: 90+"%" }} aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p className="mb-0">CSS3 80%</p>
-                        <div className="row mb-3">
-                            <div className="col-9 rounded-start" style={{height: 1.5+"rem", backgroundColor: "#3CCDDB"}}></div>
-                            <div className="col-3 rounded-end" style={{height: 1.5+"rem", backgroundColor: "#CDCDCD"}}></div>
+                        <div className="progress mb-3">
+                            <div class="progress-bar bg-info" role="progressbar" style={{ width: 80+"%" }} aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p className="mb-0">JAVASCRIPT 70%</p>
-                        <div className="row mb-3">
-                            <div className="col-8 rounded-start" style={{height: 1.5+"rem", backgroundColor: "#C1C123"}}></div>
-                            <div className="col-4 rounded-end" style={{height: 1.5+"rem", backgroundColor: "#CDCDCD"}}></div>
+                        <div className="progress mb-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style={{ width: 70+"%" }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p className="mb-0">PHP 60%</p>
-                        <div className="row mb-3">
-                            <div className="col-7 rounded-start" style={{height: 1.5+"rem", backgroundColor: "#60784E"}}></div>
-                            <div className="col-5 rounded-end" style={{height: 1.5+"rem", backgroundColor: "#CDCDCD"}}></div>
+                        <div className="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style={{ width: 60+"%" }} aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <p className="mb-0">REACT 50%</p>
-                        <div className="row mb-3">
-                            <div className="col-6 rounded-start" style={{height: 1.5+"rem", backgroundColor: "#2432AA"}}></div>
-                            <div className="col-6 rounded-end" style={{height: 1.5+"rem", backgroundColor: "#CDCDCD"}}></div>
+                        <div className="progress mb-3">
+                            <div class="progress-bar" role="progressbar" style={{ width: 50+"%" }} aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>

@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faChevronRight, faCircleChevronUp} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faSquareTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import { Route, Routes, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react'
+
 
 import logo from './img/favicon.png'
-import { Route, Routes, Link } from 'react-router-dom';
 import Home from "./components/Home";
 import Services from "./components/Services"
 
@@ -90,9 +92,59 @@ function Footer() {
         </div>
       </div>
       <p className='bg-dark text-white text-center py-2'><FontAwesomeIcon icon={faCopyright} /> Designed by John Doe</p>
+      <ScrollToTopButton/>
     </div>
   )
 }
+
+const ScrollToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Fonction pour faire défiler la page vers le haut
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
+  // Fonction pour gérer l'événement de défilement
+  const handleScroll = () => {
+    const scrollHeight = window.pageYOffset;
+    setIsVisible(scrollHeight > 300); // Ajuster la valeur 300 selon vos préférences
+  };
+
+  // Ajouter un écouteur d'événement pour le défilement
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <>
+      {isVisible && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            backgroundColor: '#333',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '4px',
+            padding: '10px 20px',
+            cursor: 'pointer',
+          }}
+        >
+          <FontAwesomeIcon icon={faCircleChevronUp}/>
+        </button>
+      )}
+    </>
+  );
+};
 
 function App() {
   return (
@@ -103,8 +155,6 @@ function App() {
         <Route path='/' element={<Home />}/>
         <Route path='/services' element={<Services />}/>
       </Routes>
-
-      <a class="btn btn-secondary position-sticky bottom-0 start-100 me-1" href="#top" role="button"><FontAwesomeIcon icon={faCircleChevronUp}/></a>
 
       <Footer />
     </div>
