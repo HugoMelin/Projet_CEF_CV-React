@@ -29,7 +29,7 @@ function Header() {
             <FontAwesomeIcon icon={faBars} className='text-light'/>
           </button>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-0" style={{ "--bs-navbar-active-color" : "#0d6efd", "--bs-navbar-hover-color" : "#0d6efd" }}>
               <li class="nav-item">
                 <Link to="/" className='nav-link'>Accueil</Link>
               </li>
@@ -91,9 +91,19 @@ function Footer() {
           </div>
           <div className='col-12 col-md-6 col-xl-3'>
             <h4>Mes dernières réalisations</h4>
+            <ul className='footer__list'>
+              <li><Link to="/realisations"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Fresh food</Link></li>
+              <li><Link to="/realisations"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Restaurant Akira</Link></li>
+              <li><Link to="/realisations"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Espace bien-être</Link></li>
+            </ul>
           </div>
           <div className='col-12 col-md-6 col-xl-3'>
             <h4>Mes derniers articles</h4>
+            <ul className='footer__list'>
+              <li><Link to="/blog"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Coder son site en HTML/CSS</Link></li>
+              <li><Link to="/blog"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Vendre ses produits sur le web</Link></li>
+              <li><Link to="/blog"><FontAwesomeIcon className="pe-2 chevronRight" icon={faChevronRight}/>Se positionner sur Google</Link></li>
+            </ul>
           </div>
         </div>
       </div>
