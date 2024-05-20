@@ -5,7 +5,25 @@ import { useEffect } from 'react'
 export default function Legal () {
     useEffect(() => {
         document.title = "Mention Legal - John Doe"
-    })
+        // Fonction pour désindexer la page
+        const desindexerPage = () => {
+            const metaRobots = document.createElement('meta');
+            metaRobots.name = 'robots';
+            metaRobots.content = 'noindex, nofollow';
+            document.head.appendChild(metaRobots);
+        };
+    
+        // Appeler la fonction pour désindexer la page
+        desindexerPage();
+    
+        // Fonction de nettoyage pour supprimer la balise meta lors du démontage du composant
+        return () => {
+            const metaRobots = document.querySelector('meta[name="robots"]');
+            if (metaRobots) {
+            document.head.removeChild(metaRobots);
+            }
+        };
+        }, []);
 
     return (
         <div className="container mt-3">
