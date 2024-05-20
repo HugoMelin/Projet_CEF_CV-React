@@ -7,7 +7,7 @@ function Head() {
             <h1 className="text-white">Bonjour, je suis John Doe</h1>
             <h2 className="text-white">Développeur web full stack</h2>
             <div>
-                <button type="button" class="btn btn-primary"><a href="#about" className="text-white text-decoration-none">En savoir plus</a></button>
+                <a href="#about" className="btn btn-primary text-white text-decoration-none">En savoir plus</a>
             </div>
         </div>
     )
@@ -22,10 +22,10 @@ function About({user}) {
                     <p>Passionné par l'informatique et les nouvelles technologies, j'ai suivi une formation d'<strong>intégrateur-développeur web</strong> au CEF.
                     Au cours de cette formation, j'ai pu acquérir des bases solides pour travailler dans le domaine du <strong>développement web</strong>.</p>
                     <p>Basé à Lyon, je suis en recherche d'une alternance au sein d'une agence digitale pour consolider ma formation de <strong>développeur web full stack</strong>.</p>
-                    <p>J'avvorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.</p>
+                    <p>J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.</p>
                 </div>
                 <div className="col-12 col-md-6">
-                    <img src={user.photo} alt={user.name} className="rounded mx-auto"></img>
+                    <img src={user.photo} alt={user.name} className="rounded mx-auto" style={{width: 100+"%"}}></img>
                     <h3>Mes compétences</h3>
                     <div className="container">
                         <p className="mb-0">HTML5 90%</p>

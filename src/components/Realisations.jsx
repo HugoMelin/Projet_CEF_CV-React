@@ -4,7 +4,6 @@ import freshFood from "../img/portfolio/fresh-food.jpg"
 import restaurantAkira from "../img/portfolio/restaurant-japonais.jpg"
 import espaceBienEtre from "../img/portfolio/espace-bien-etre.jpg"
 import { useEffect } from "react"
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group"
 
 function RealisationsCard () {
     const [modalData, setModalData] = useState({});

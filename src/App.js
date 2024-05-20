@@ -55,16 +55,16 @@ function Header() {
 
 function Footer() {
   return(
-    <div className='pt-4'>
+    <footer className='pt-4'>
       <div className='container-fluid'>
         <div className='row m-2'>
           <div className='col-12 col-md-6 col-xl-3 my-2'>
-            <address>
               <h4>John Doe</h4>
-              <p>40 Rue Laure Diebold <br/>
-              69009 Lyon, France</p>
-              <p>Téléphone : <a href='tel:0620304050'>06 20 30 40 50</a></p>
-            </address>
+              <address>
+                <p>40 Rue Laure Diebold <br/>
+                69009 Lyon, France</p>
+                <p>Téléphone : <a href='tel:0620304050'>06 20 30 40 50</a></p>
+              </address>
             <div className='fs-1'>
               <a className='me-3' rel="nofollow" href='https://github.com/github-john-doe' target='blank'>
                 <FontAwesomeIcon icon={faGithub}/>
@@ -109,7 +109,7 @@ function Footer() {
       </div>
       <p className='bg-dark text-white text-center py-2'><FontAwesomeIcon icon={faCopyright} /> Designed by John Doe</p>
       <ScrollToTopButton/>
-    </div>
+    </footer>
   )
 }
 
