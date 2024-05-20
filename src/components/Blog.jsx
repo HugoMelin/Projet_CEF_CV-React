@@ -9,6 +9,9 @@ import technos from "../img/blog/technos.png"
 import { useEffect } from "react"
 
 function BlogCard () {
+    const [modalData, setModalData] = useState({});
+    const [modalImage, setModalImage] = useState();
+
     const [articles, setArticles] = useState([
         {
             id: 1,
@@ -81,11 +84,31 @@ function BlogCard () {
                     <div class="card-body">
                         <h5 class="card-title">{article.name}</h5>
                         <p class="card-text">{article.desc}</p>
-                        <button type="button" class="btn btn-primary">Lire la suite</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                        onClick={()=> {setModalData(article); setModalImage(<img src={article.img.src} alt={article.img.alt} style={{width: 100+"%"}}></img>)}}>Lire la suite</button>
                     </div>
                     <div class="card-footer">
                         <small class="text-body-secondary">Publié le {article.date}</small>
                     </div>
+                    </div>
+
+                    <div id="exampleModal" class="modal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">{modalData.name}</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                {modalImage}
+                                <p>{modalData.desc}</p>
+                                <p>L'article a été écrit le {modalData.date}.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}
