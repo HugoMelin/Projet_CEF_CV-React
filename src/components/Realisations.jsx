@@ -3,8 +3,13 @@ import { useState } from "react"
 import freshFood from "../img/portfolio/fresh-food.jpg"
 import restaurantAkira from "../img/portfolio/restaurant-japonais.jpg"
 import espaceBienEtre from "../img/portfolio/espace-bien-etre.jpg"
+import { useEffect } from "react"
 
 function RealisationsCard () {
+    useEffect(() => {
+        document.title = "Mes réallisations - John Doe"
+    })
+
     const [realisations, setRealisations] = useState([
         {
             id: 1,

@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faMobileScreenButton, faEnvelope, faGlobe } from '@fortawesome/free-solid-svg-icons'
+import { useEffect } from 'react'
 
 export default function Legal () {
+    useEffect(() => {
+        document.title = "Mention Legal - John Doe"
+    })
+
     return (
         <div className="container mt-3">
             <div className="titre text-center">

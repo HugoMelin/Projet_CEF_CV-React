@@ -5,3 +5,11 @@ em {
 .card {
     height: 100%;
 }
+
+.card-icon {
+    color: #0d6efd;
+}
+
+.card:hover .card-icon{
+    color: #cde1f8;
+}

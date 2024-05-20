@@ -6,6 +6,7 @@ import google from "../img/blog/google.jpg"
 import screens from "../img/blog/screens.jpg"
 import seo from "../img/blog/seo.jpg"
 import technos from "../img/blog/technos.png"
+import { useEffect } from "react"
 
 function BlogCard () {
     const [articles, setArticles] = useState([
@@ -93,6 +94,10 @@ function BlogCard () {
 }
 
 export default function Blog () {
+    useEffect(() => {
+        document.title = "Mon blog - John Doe"
+    })
+
     return (
         <div>
             <div className="container-fluid banner"></div>

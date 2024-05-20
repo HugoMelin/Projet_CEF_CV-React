@@ -142,18 +142,8 @@ const ScrollToTopButton = () => {
     <>
       {isVisible && (
         <button
+          id='buttonTop'
           onClick={scrollToTop}
-          style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            backgroundColor: '#333',
-            color: '#fff',
-            border: 'none',
-            borderRadius: '4px',
-            padding: '10px 20px',
-            cursor: 'pointer',
-          }}
         >
           <FontAwesomeIcon icon={faCircleChevronUp}/>
         </button>
@@ -162,13 +152,32 @@ const ScrollToTopButton = () => {
   );
 };
 
+function ApiGitHub () {
+  const [user, setUsers]= useState([])
+  const getUser = async() => {
+    const res = await fetch("https://api.github.com/users/github-john-doe")
+    const json = await res.json()
+    setUsers(json)
+  }
+  useEffect(() =>{
+    getUser()
+  },[])
+
+  return(
+    {
+      name: <p>{user.login}</p>,
+      photo: `${user.avatar_url}`
+    }
+  )
+}
+
 function App() {
   return (
     <div className="App">
       <Header id="top"/>
 
       <Routes>
-        <Route path='/' element={<Home />}/>
+        <Route path='/' element={<Home user={ApiGitHub()}/>}/>
         <Route path='/services' element={<Services />}/>
         <Route path='/realisations' element={<Realisations />}/>
         <Route path='/blog' element={<Blog />}/>
