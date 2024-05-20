@@ -2,6 +2,7 @@ import "../contact.css"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faMobileScreenButton } from '@fortawesome/free-solid-svg-icons'
+import { useEffect } from "react"
 
 function TitreSection({titre}) {
     return (
@@ -12,6 +13,10 @@ function TitreSection({titre}) {
 }
 
 export default function Contact () {
+    useEffect(() => {
+        document.title = "Me contacter - John Doe"
+    })
+
     return (
         <div className="container-fluid containerBg py-3">
             <div className="container contact rounded py-5">

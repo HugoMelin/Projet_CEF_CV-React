@@ -1,5 +1,5 @@
 import "../home.css"
-import aboutImg from "../img/john-doe-about.jpg"
+import { useEffect } from 'react'
 
 function Head() {
     return(
@@ -13,7 +13,7 @@ function Head() {
     )
 }
 
-function About() {
+function About({user}) {
     return(
         <div id="about" className="container my-3 mx-auto p-3 bg-white shadow">
             <div className="row">
@@ -25,7 +25,7 @@ function About() {
                     <p>J'avvorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.</p>
                 </div>
                 <div className="col-12 col-md-6">
-                    <img src={aboutImg} alt="John Doe working" style={{ width: 100+"%"}} className="rounded"></img>
+                    <img src={user.photo} alt={user.name} className="rounded mx-auto"></img>
                     <h3>Mes compétences</h3>
                     <div className="container">
                         <p className="mb-0">HTML5 90%</p>
@@ -56,11 +56,15 @@ function About() {
     )
 }
 
-export default function Home() {
+export default function Home(props) {
+    useEffect(() => {
+        document.title = "Portfolio - John Doe"
+    })
+
     return(
         <div>
             <Head/>
-            <About/>
+            <About user={props.user}/>
         </div>
     )
 }
