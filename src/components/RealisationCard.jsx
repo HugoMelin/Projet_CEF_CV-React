@@ -3,7 +3,6 @@ import { useState } from "react"
 import freshFood from "../img/portfolio/fresh-food.jpg"
 import restaurantAkira from "../img/portfolio/restaurant-japonais.jpg"
 import espaceBienEtre from "../img/portfolio/espace-bien-etre.jpg"
-import { useEffect } from "react"
 
 function RealisationsCard () {
     const [modalData, setModalData] = useState({});
@@ -83,23 +82,4 @@ function RealisationsCard () {
     )
 }
 
-export default function Realisations () {
-    useEffect(() => {
-        document.title = "Mes réallisations - John Doe"
-    })
-
-    return (
-        <div>
-            <div className="container-fluid banner"></div>
-            <div className="container text-center">
-                <h2 className="text-uppercase">Portfolio</h2>
-                <p>Voici quelques-unes de mes réalisations</p>
-                <div className='border-bottom w-25 m-auto border-3' style={{"--bs-border-color": "#0d6efd"}}></div>
-
-                <div className="my-3">
-                    <RealisationsCard/>
-                </div>
-            </div>
-        </div>
-    )
-}
+export default RealisationsCard

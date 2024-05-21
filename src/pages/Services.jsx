@@ -1,4 +1,4 @@
-import '../services.css'
+import '../css/services.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDisplay, faFileCode, faMagnifyingGlassDollar } from '@fortawesome/free-solid-svg-icons'
