@@ -1,19 +1,6 @@
-import "../home.css"
-import { useEffect } from 'react'
+import aboutImg from "../img/john-doe-about.jpg"
 
-function Head() {
-    return(
-        <div className="contenair-fluid text-center bg-image d-flex flex-column justify-content-center" id="header">
-            <h1 className="text-white">Bonjour, je suis John Doe</h1>
-            <h2 className="text-white">Développeur web full stack</h2>
-            <div>
-                <a href="#about" className="btn btn-primary text-white text-decoration-none">En savoir plus</a>
-            </div>
-        </div>
-    )
-}
-
-function About({user}) {
+function About() {
     return(
         <div id="about" className="container my-3 mx-auto p-3 bg-white shadow">
             <div className="row">
@@ -25,7 +12,7 @@ function About({user}) {
                     <p>J'accorde une attention particulière à la qualité du code que j'écris et je respecte les bonnes pratiques du web.</p>
                 </div>
                 <div className="col-12 col-md-6">
-                    <img src={user.photo} alt={user.name} className="rounded mx-auto" style={{width: 100+"%"}}></img>
+                    <img src={aboutImg} alt="John Doe" className="rounded mx-auto" style={{ width: 600+"px", maxWidth: 100+"%"}}></img>
                     <h3>Mes compétences</h3>
                     <div className="container">
                         <p className="mb-0">HTML5 90%</p>
@@ -56,15 +43,4 @@ function About({user}) {
     )
 }
 
-export default function Home(props) {
-    useEffect(() => {
-        document.title = "Portfolio - John Doe"
-    })
-
-    return(
-        <div>
-            <Head/>
-            <About user={props.user}/>
-        </div>
-    )
-}
+export default About
